@@ -32,7 +32,7 @@ def preprocess(df: pd.DataFrame, encoder=None, training=True):
 
     # Encode categoricals
     if training:
-        encoder = OneHotEncoder(handle_unknown="ignore", sparse=False)
+        encoder = OneHotEncoder(handle_unknown="ignore")
         encoded = encoder.fit_transform(df[CATEGORICAL_COLS])
     else:
         encoded = encoder.transform(df[CATEGORICAL_COLS])

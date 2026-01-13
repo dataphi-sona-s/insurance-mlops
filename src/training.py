@@ -5,8 +5,8 @@ from sklearn.metrics import mean_squared_error
 
 from preprocessing import preprocess
 
-train_df = pd.read_csv(args.train)
-val_df = pd.read_csv(args.validation)
+train_df = pd.read_csv("../data/train.csv")
+val_df = pd.read_csv("../data/validation.csv")
 
 y_train = train_df["charges"]
 y_val = val_df["charges"]
